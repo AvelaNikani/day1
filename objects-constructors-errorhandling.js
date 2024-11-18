@@ -52,27 +52,44 @@
 //  }
 //  let  input = prompt('What is your name?')
 //  console.log(input);
-function CreatePerson(name,surname,hairType){
-    this.name = name;
-    this.surname = surname;
-    this.hairType = hairType;
-}
- let person = new CreatePerson('Yandile','Matyityilili','Bold')
- let person2 = new CreatePerson('Ethan','Brown','Straight')
- let people = [person,person2]
- console.log(people);
-for (let object of people){
-    if (object.hairType == 'Straight'){
-        console.log(object.name)
-    }
-}
-let cars =[
-    {
-        brand:'Toyota',
-        models:[{type:'Corolla'}]
-    },
-    {
-        brand:'BMW',
-        models:[{}],
-    }
-]
+// function CreatePerson(name,surname,hairType){
+//     this.name = name;
+//     this.surname = surname;
+//     this.hairType = hairType;
+// }
+//  let person = new CreatePerson('Yandile','Matyityilili','Bold')
+//  let person2 = new CreatePerson('Ethan','Brown','Straight')
+//  let people = [person,person2]
+//  console.log(people);
+// for (let object of people){
+//     if (object.hairType == 'Straight'){
+//         console.log(object.name)
+//     }
+// }
+// let cars =[
+//     {
+//         brand:'Toyota',
+//         models:[{type:'Corolla'}]
+//     },
+//     {
+//         brand:'BMW',
+//         models:[{}],
+//     }
+// ]
+// Error handling
+ function times (a,b){
+    if (typeof a!= 'number'|| typeof b != 'number') throw new Error('Hold up a or b is not a number')
+    return a*b
+ }
+ try{
+    console.log(times(1,8));
+    console.log('Hi there times');
+    
+ } catch(e){
+    console.log(e);
+    console.log('this is after the error');
+    
+ } finally{
+    console.log("Yay! I have run my code");
+    
+ }
